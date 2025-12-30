@@ -13,6 +13,7 @@ from shop.serializers import (
     OrderDetailSerializer,
     CreateOrderSerializer,
 )
+from shop.utils import send_order_confirmation_email
 
 
 @swagger_auto_schema(
@@ -237,6 +238,9 @@ def create_order(request):
                     guest_cart = Cart.objects.filter(session_id=session_id, is_active=True).first()
                     if guest_cart:
                         guest_cart.items.all().delete()
+        
+            # Send order confirmation email
+            send_order_confirmation_email(order)
         
             order_serializer = OrderDetailSerializer(order)
             return Response({

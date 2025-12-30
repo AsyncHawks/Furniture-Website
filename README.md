@@ -255,7 +255,7 @@ This project is part of an internship program.
 
 ## 👥 Authors
 
-- Development Team - Furniture Website Project
+- Abdul Ahad - Furniture Website Project
 
 ## 🙏 Acknowledgments
 

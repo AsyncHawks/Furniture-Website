@@ -1,0 +1,54 @@
+{
+  "productSchema": {
+    "id": 15,
+    "title": "Indoor Wooden Swing",
+    "categories": ["Swings"],
+    "price": [45000, 60000],
+    "images": [
+      "/images/products/swing-1.webp",
+      "/images/products/swing-2.webp",
+      "/images/products/swing-3.webp",
+      "/images/products/swing-4.webp",
+      "/images/products/swing-5.webp"
+    ],
+    "description": "Suspended indoor swing with premium cushioning and solid wood build.",
+    "features": [
+      "Hand-carved Sheesham wood",
+      "Premium soft cushioning",
+      "Durable mounting chain",
+      "Suitable for indoor & covered outdoor use"
+    ],
+    "freeShipping": true,
+    "available": "in",
+    "sold": 29,
+    "createdAt": "2025-01-16",
+
+    "variants": [
+      {
+        "id": "SWING-STD",
+        "title": "Standard Size",
+        "price": 45000,
+        "compareAt": 52000,
+        "images": ["/images/products/swing-std-1.webp", "/images/products/swing-std-2.webp"],
+        "stock": "in"
+      },
+      {
+        "id": "SWING-LRG",
+        "title": "Large Size",
+        "price": 60000,
+        "compareAt": 68000,
+        "images": ["/images/products/swing-large-1.webp", "/images/products/swing-large-2.webp"],
+        "stock": "in"
+      }
+    ],
+
+    "buyTogether": [
+      {
+        "id": 101
+      },
+      {
+        "id": 102
+      }
+    ]
+  }
+}

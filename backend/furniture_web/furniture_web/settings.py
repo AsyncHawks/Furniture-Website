@@ -140,7 +140,7 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 # Django REST Framework
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'accounts.authentication.JWTAuthenticationSafe',
         'rest_framework.authentication.SessionAuthentication',
     ),
     'DEFAULT_PERMISSION_CLASSES': [
@@ -148,6 +148,7 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,
+    'EXCEPTION_HANDLER': 'rest_framework.views.exception_handler',
 }
 
 # Simple JWT Settings
@@ -173,6 +174,9 @@ SIMPLE_JWT = {
     'TOKEN_TYPE_CLAIM': 'token_type',
     
     'JTI_CLAIM': 'jti',
+    
+    # Don't raise exceptions for invalid/missing auth on endpoints with AllowAny
+    'UPDATE_LAST_LOGIN': False,
 }
 
 # Custom Authentication Backend
